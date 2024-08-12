@@ -2174,6 +2174,7 @@ input[type="checkbox"] {
 
 .quickEditor.readOnly .rightBlock select,
 .quickEditor.readOnly .rightBlock .inputWrapper input:not(.filterInput),
+.quickEditor.readOnly .rightBlock .select-master-page-wrapper input:not(.filterInput),
 .quickEditor.readOnly .rightBlock .quick-style-input-select,
 .quickEditor.readOnly .rightBlock .buttonsGroup button,
 .quickEditor.readOnly .rightBlock .prop-switch,
@@ -2191,8 +2192,14 @@ input[type="checkbox"] {
   color: rgba(0, 0, 0, .26) !important;
   border-color: rgba(161, 161, 161, 0.3) !important;
 }
+.quickEditor.readOnly .rightBlock .select-master-page-wrapper button {
+  pointer-events: none;
+  background: #151233 !important;
+  color: #FFFFFF !important;
+}
 
 .quickEditor.readOnly .rightBlock .inputWrapper,
+.quickEditor.readOnly .rightBlock .select-master-page-wrapper,
 .quickEditor.readOnly .tableList ul,
 .quickEditor.readOnly .nemo_quickBtns,
 .quickEditor.readOnly .rightBlock .buttonsGroup,
