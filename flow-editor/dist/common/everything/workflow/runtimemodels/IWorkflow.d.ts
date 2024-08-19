@@ -11,17 +11,9 @@ export declare const NamedFunctions: {
     getUser: string;
     notify: string;
 };
-export declare const StatusTypes: {
-    "": string;
-    inProgress: string;
-    waitForApproval: string;
-    completed: string;
-    new: string;
-    returned: string;
-    cancelled: string;
-    waitForControl: string;
-};
-export type StatusType = keyof typeof StatusTypes;
+export declare const StatusTypes_EN: Record<StatusType, string>;
+export declare const StatusTypes_TR: Record<StatusType, string>;
+export type StatusType = "" | "inProgress" | "waitForApproval" | "completed" | "new" | "returned" | "cancelled" | "waitForControl";
 export type IWorkflowModelNamedFunctions = Record<keyof typeof NamedFunctions, string>;
 export interface IWorkflowModel extends IFlowModelBase {
     type: "workflow";
@@ -72,7 +64,7 @@ export type IWFStepProps = {
     label?: IExpressionData;
     taskName?: IExpressionData;
     procesStatus: StatusType;
-    taskStatus?: string;
+    taskStatus?: StatusType;
     sendTo?: "swimlane" | "user";
     user?: string;
     forms: Array<IForm>;

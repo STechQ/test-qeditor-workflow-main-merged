@@ -1,9 +1,14 @@
 export declare const WorkflowModelTypeTag = "workflow";
 export type WorkflowModelType = typeof WorkflowModelTypeTag;
 export type DateTime = string;
+export type ActionAndCustomType = ActionType & "addNote" & "delete";
+export declare const ActionTypes_TR: Record<ActionAndCustomType, string>;
+export declare const ActionTypes_EN: Record<ActionAndCustomType, string>;
 export declare const ActionTypes: {
     start: string;
     complete: string;
+    cancel: string;
+    reject: string;
     claim: string;
     unclaim: string;
     assignToUser: string;
