@@ -5,6 +5,7 @@ import { IPlatformClientAdaptor } from "./platform/IPlatformClientAdaptor";
 import { IPlatformServerAdaptor } from "./platform/IPlatformServerAdaptor";
 import { Omit2 } from "./platform/tsHelperTypes";
 import { IPlatformWorkflowAdaptor } from "./platform/IPlatformWorkflowAdaptor";
+import { IFlowInfo } from "./IFlowInfo";
 export interface IRuntimeMessageContext {
     vars: any;
     currentUser?: any;
@@ -15,6 +16,7 @@ export type RuntimeMessage = {
     input: any;
     context: IRuntimeMessageContext;
     output?: any;
+    infoList?: Array<IFlowInfo>;
     constants?: Record<string, any>;
     constantsWId?: Record<string, any>;
 };
